@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ulang Tahun Kamu Dian🩷</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fce4ec;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+     .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 300px;
+      background: #fff;
+      border: 2px solid #ffa726;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      z-index: 1000;
+    }
+
+    .popup img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .popup p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+   .popup button {
+      padding: 8px 16px;
+      font-size: 14px;
+      color: #fff;
+      background-color: #ffa726;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup button:hover {
+      background-color: #fb8c00;
+    }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background music -->
+  <audio id="background-music" autoplay loop>
+    <source src="your-music-file.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Pop-Up Container -->
+  <div class="popup" id="popup">
+    <img id="popup-image" src="image1.gif" alt="Image">
+    <p id="popup-text">Hallo Sayangkuu🩷....ada pesan nih buat kamu</p>
+    <button onclick="nextPopup()" id="next-button">Buka</button>
+  </div>
+
+  <script>
+    const popups = [
+      {
+        image: "image1.png",
+        text: "Hallo Sayang 👋👋👋"
+      },
+      {
+        image: "gif1.gif",
+        text: "Selamat ulang tahun, sayang. Di hari spesial kamu ini, aku cuma punya satu doa: semoga semua harapan yang kamu simpan diam-diam, yang kamu ucapkan dalam hati setiap malam Allah kabulkan satu per satu."
+      },
+      {
+        image: "gif2.gif",
+        text: "Semoga langkah kamu selalu dimudahkan, dijauhkan dari hal-hal yang bikin sedih, dan dipertemukan dengan banyak kebaikan baru. Aku berharap kamu selalu sehat, hatimu tetap hangat, dan hidupmu penuh ketenangan."
+      },
+      {
+        image: "gif3.gif",
+        text: "Terima kasih sudah jadi seseorang yang berarti dalam hidupku. Semoga tahun ini membawa lebih banyak kebahagiaan buat kamu, dan semoga aku selalu bisa ada buat mendukung setiap jalan yang kamu pilih."
+      },
+      {
+        image: "gif4.gif",
+        text: "walaupun kita belum pernah ketemu secara langsung, tapi aku ngerasa kamu tuh ada deket aku, nanti kalau ketemu aku bawain kue ulang tahun buat kamu, mungkin jadi lucu juga karena ulang tahun nya udah kelewat, tapi tetep aku pengen bawain kamu kue wkwk."
+      },
+      {
+        image: "gif5.gif",
+        text: "makasii udah baca semuanya, intinya aku pengen ngucapin happy birthday yang ke 26 yaa sayangku... kalo udah sampe sini kabarin aku yaa, i have a little gift for you.... oiya next nih ada lagu buat kamu."
+      },
+  
+    ];
+
+    let currentIndex = 0;
+
+    function nextPopup() {
+      currentIndex++;
+
+      if (currentIndex >= popups.length) {
+        // Redirect to Spotify playlist
+        window.location.href = "https://youtube.com/playlist?list=PLE8BTgmfovYkz3tJtZwK5tQor2tpqxhyl&si=sMNkyfpeEqTKo78I";
+        return;
+      }
+
+      // Update the pop-up content
+      document.getElementById("popup-image").src = popups[currentIndex].image;
+      document.getElementById("popup-text").textContent = popups[currentIndex].text;
+    }
+  </script>
+</body>
+</html>
